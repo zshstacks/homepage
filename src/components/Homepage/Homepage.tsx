@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import HomeContent from "./HomeContent/HomeContent";
 
@@ -7,6 +8,8 @@ const Homepage = () => {
       <Header />
 
       <HomeContent />
+
+      <Footer />
     </div>
   );
 };

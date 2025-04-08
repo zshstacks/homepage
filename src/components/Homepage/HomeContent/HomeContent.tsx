@@ -1,10 +1,12 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { MdOutlineNavigateNext } from "react-icons/md";
 
 const HomeContent = () => {
   return (
     <div className="w-full">
-      <div className="flex  border border-cyan-200 justify-center mx-auto min-h-full w-[768px]">
+      <div className="flex  justify-center mx-auto min-h-full w-[768px]">
         <div className=" ">
           {/* threejs something */}
           <div className="h-[640px] w-[640px]">
@@ -64,15 +66,25 @@ const HomeContent = () => {
                 <h3 className="font-bold text-xl border-b-4 border-b-white/20 w-fit  mb-2">
                   On the web
                 </h3>
-                <ul>
+                <ul className=" font-bold text-[#81e6d9]">
                   <li>
-                    <a href="">
-                      <button>Test</button>
+                    <a href="https://github.com/wlr1" target="_blank">
+                      <button className=" hover:bg-[#81e6d9]/20 transition-all duration-200 rounded-md p-2 max-w-40 cursor-pointer flex">
+                        <span className="my-auto">
+                          <FaGithub className="mr-2" />
+                        </span>
+                        @wlr1
+                      </button>
                     </a>
                   </li>
                   <li>
-                    <a href="">
-                      <button>Test</button>
+                    <a href="https://x.com/wlr1_dev" target="_blank">
+                      <button className=" hover:bg-[#81e6d9]/20 transition-all duration-200 rounded-md p-2 max-w-40 cursor-pointer flex">
+                        <span className="my-auto">
+                          <FaSquareXTwitter className="mr-2" />
+                        </span>
+                        @wlr1_dev
+                      </button>
                     </a>
                   </li>
                 </ul>

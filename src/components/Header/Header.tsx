@@ -18,18 +18,6 @@ const Header = () => {
                   <FaGithub className="my-auto" size={13} />
                   <span>Source</span>
                 </a>
-                <a href="#" className="hover:underline flex gap-1">
-                  <FaGithub className="my-auto" size={13} />
-                  <span>Source</span>
-                </a>
-                <a href="#" className="hover:underline flex gap-1">
-                  <FaGithub className="my-auto" size={13} />
-                  <span>Source</span>
-                </a>
-                <a href="#" className="hover:underline flex gap-1">
-                  <FaGithub className="my-auto" size={13} />
-                  <span>Source</span>
-                </a>
               </div>
             </div>
 
