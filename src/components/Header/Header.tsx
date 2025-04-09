@@ -1,20 +1,35 @@
+import { HeaderProps } from "@/types/types";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
   return (
     <nav className="w-full backdrop-blur-lg fixed">
       <div className="w-[768px] h-[56px] flex  mx-auto px-2">
         <div className="flex min-w-full gap-12 h-[40px]  my-auto ">
           <div className="flex justify-between w-full my-auto">
             <div className="flex my-auto ">
-              <h1 className="font-bold text-lg">Edgar Grishin </h1>
+              <h1 className="font-bold text-lg">
+                <button
+                  className=" cursor-pointer"
+                  onClick={() => handleContentChange("home")}
+                >
+                  Edgar Grishin
+                </button>
+              </h1>
 
               <div className="flex ml-10 gap-4  my-auto">
-                <a href="#" className="hover:underline">
+                <button
+                  onClick={() => handleContentChange("work")}
+                  className="hover:underline  cursor-pointer"
+                >
                   Works
-                </a>
-                <a href="#" className="hover:underline flex gap-1">
+                </button>
+                <a
+                  href="https://github.com/wlr1/homepage"
+                  className="hover:underline flex gap-1"
+                  target="_blank"
+                >
                   <FaGithub className="my-auto" size={13} />
                   <span>Source</span>
                 </a>
