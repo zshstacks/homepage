@@ -1,10 +1,22 @@
 import { HeaderProps } from "@/types/types";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
+import { useLocation, useNavigate } from "react-router";
 
 const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (path: string) => {
+    if (handleContentChange) {
+      handleContentChange(path === "/" ? "home" : "work");
+    } else {
+      navigate(path);
+    }
+  };
+
   return (
-    <nav className="w-full backdrop-blur-lg fixed">
+    <nav className="w-full backdrop-blur-lg fixed text-white/80">
       <div className="w-[768px] h-[56px] flex  mx-auto px-2">
         <div className="flex min-w-full gap-12 h-[40px]  my-auto ">
           <div className="flex justify-between w-full my-auto">
@@ -12,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
               <h1 className="font-bold text-lg">
                 <button
                   className=" cursor-pointer"
-                  onClick={() => handleContentChange("home")}
+                  onClick={() => handleNavigation("/")}
                 >
                   Edgar Grishin
                 </button>
@@ -20,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
 
               <div className="flex ml-10 gap-4  my-auto">
                 <button
-                  onClick={() => handleContentChange("work")}
+                  onClick={() => handleNavigation("/works")}
                   className="hover:underline  cursor-pointer"
                 >
                   Works

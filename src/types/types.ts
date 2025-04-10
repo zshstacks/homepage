@@ -1,3 +1,3 @@
 export interface HeaderProps {
-  handleContentChange: (content: string) => void;
+  handleContentChange?: (content: string) => void;
 }
