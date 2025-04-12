@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
   };
 
   return (
-    <nav className="w-full backdrop-blur-lg fixed text-white/80">
+    <nav className="w-full backdrop-blur-lg fixed text-white/80 z-50">
       <div className="w-[768px] h-[56px] flex  mx-auto px-2">
         <div className="flex min-w-full gap-12 h-[40px]  my-auto ">
           <div className="flex justify-between w-full my-auto">

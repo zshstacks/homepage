@@ -1,7 +1,9 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
+import ThreeModel from "@/utils/ThreeModel/ThreeModel";
 import React from "react";
 import { Link } from "react-router";
+import "animate.css";
 
 const WorksContent = () => {
   return (
@@ -9,8 +11,10 @@ const WorksContent = () => {
       <Header />
       <div className="flex  justify-center mx-auto min-h-full w-[768px]">
         <div>
-          <div className="h-[640px] w-[640px]">
-            <img src="/resized.png" alt="" className="" />
+          <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
+            <div className=" w-[640px] h-[640px] m-auto  absolute bottom-0 -top-88">
+              <ThreeModel />
+            </div>
           </div>
           <article className="relative opacity-100 text-white/80">
             <div className="flex flex-col justify-center w-[486px]  mx-auto  ">

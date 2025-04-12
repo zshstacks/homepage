@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
 import ClassNames from "embla-carousel-class-names";
+import ThreeModel from "@/utils/ThreeModel/ThreeModel";
 
 const projects = {
   workspace: {
@@ -82,18 +83,20 @@ const WorkItem = () => {
       <Header />
       <div className="flex  justify-center mx-auto min-h-full w-[768px]">
         <div>
-          <div className="h-[640px] w-[640px]">
-            <img src="/resized.png" alt="" className="" />
+          <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
+            <div className=" w-[640px] h-[640px] m-auto  absolute bottom-0 -top-88">
+              <ThreeModel />
+            </div>
           </div>
           <article className="relative opacity-100 text-white/80">
             <div className="flex flex-col justify-center w-[486px]  mx-auto  ">
               {/* back */}
               <div>
                 <h3 className="flex ">
-                  <span className="my-2 ">
+                  <span className="my-2">
                     <MdOutlineArrowBackIos color="white" size={12} />
                   </span>
-                  <span className="text-[#ff63c3] hover:underline">
+                  <span className="text-[#ff63c3] hover:underline cursor-pointer ml-1">
                     Back to my works
                   </span>
                 </h3>

@@ -1,19 +1,24 @@
+import ThreeModel from "@/utils/ThreeModel/ThreeModel";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { MdOutlineNavigateNext } from "react-icons/md";
+import { Link } from "react-router";
+import "animate.css";
 
 const HomeContent = () => {
   return (
     <div className="w-full">
       <div className="flex  justify-center mx-auto min-h-full w-[768px]">
-        <div className=" ">
+        <div>
           {/* threejs something */}
-          <div className="h-[640px] w-[640px]">
-            <img src="/resized.png" alt="" className="" />
+          <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
+            <div className=" w-[640px] h-[640px] m-auto  absolute bottom-0 -top-96">
+              <ThreeModel />
+            </div>
           </div>
 
           {/* content */}
-          <article className="relative opacity-100 ">
+          <article className="relative opacity-100">
             <div className="flex flex-col justify-center w-[486px]  mx-auto  ">
               <div className=" flex justify-center mx-auto p-3 mb-4 w-[486px] rounded-md bg-white/5 backdrop-blur-lg">
                 Hello, I'm a fullstack web developer based in Latvia!
@@ -41,15 +46,15 @@ const HomeContent = () => {
                   laudantium eaque consequatur quidem!
                 </p>
                 <div className="w-[486px] mt-3 ">
-                  <a
-                    href="#"
+                  <Link
+                    to="/works"
                     className="bg-[#81e6d9] h-[40px] w-[146px] flex justify-center items-center mx-auto text-black font-semibold rounded-md "
                   >
-                    My portfolio{" "}
+                    My portfolio
                     <span className="ml-2 mt-[1px]">
                       <MdOutlineNavigateNext className="my-auto text-center align-middle flex justify-center items-center" />
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className=" w-[486px]">
