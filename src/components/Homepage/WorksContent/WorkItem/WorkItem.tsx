@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import React from "react";
+
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { Link, useParams } from "react-router";
 import useEmblaCarousel from "embla-carousel-react";
@@ -84,11 +84,9 @@ const WorkItem = () => {
       <div className="flex  justify-center mx-auto min-h-full w-[768px]">
         <div>
           <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
-            <div className=" w-[640px] h-[640px] m-auto  absolute bottom-0 -top-88">
-              <ThreeModel />
-            </div>
+            <ThreeModel />
           </div>
-          <article className="relative opacity-100 text-white/80">
+          <article className="relative opacity-100 text-white/80 animate__animated animate__fadeIn">
             <div className="flex flex-col justify-center w-[486px]  mx-auto  ">
               {/* back */}
               <div>
@@ -96,9 +94,12 @@ const WorkItem = () => {
                   <span className="my-2">
                     <MdOutlineArrowBackIos color="white" size={12} />
                   </span>
-                  <span className="text-[#ff63c3] hover:underline cursor-pointer ml-1">
+                  <Link
+                    to="/works"
+                    className="text-[#ff63c3] hover:underline cursor-pointer ml-1"
+                  >
                     Back to my works
-                  </span>
+                  </Link>
                 </h3>
               </div>
               {/* proj desc */}
@@ -138,7 +139,9 @@ const WorkItem = () => {
           </article>
         </div>
       </div>
-      <Footer />
+      <div className="animate__animated animate__fadeIn animate__slow">
+        <Footer />
+      </div>
     </div>
   );
 };

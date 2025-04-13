@@ -16,12 +16,12 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
   };
 
   return (
-    <nav className="w-full backdrop-blur-lg fixed text-white/80 z-50">
+    <nav className="w-full backdrop-blur-lg fixed text-white/80  z-50">
       <div className="w-[768px] h-[56px] flex  mx-auto px-2">
         <div className="flex min-w-full gap-12 h-[40px]  my-auto ">
           <div className="flex justify-between w-full my-auto">
-            <div className="flex my-auto ">
-              <h1 className="font-bold text-lg">
+            <div className="flex gap-x-4 my-auto">
+              <h1 className="font-bold text-lg flex mr-4">
                 <button
                   className=" cursor-pointer"
                   onClick={() => handleNavigation("/")}
@@ -30,22 +30,27 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
                 </button>
               </h1>
 
-              <div className="flex ml-10 gap-4  my-auto">
+              <div className=" flex ">
                 <button
                   onClick={() => handleNavigation("/works")}
-                  className="hover:underline  cursor-pointer"
+                  className={`hover:underline  cursor-pointer p-2 ${
+                    location.pathname === "/works"
+                      ? "bg-[#81e6d9] text-black "
+                      : ""
+                  }`}
                 >
                   Works
                 </button>
-                <a
-                  href="https://github.com/wlr1/homepage"
-                  className="hover:underline flex gap-1"
-                  target="_blank"
-                >
-                  <FaGithub className="my-auto" size={13} />
-                  <span>Source</span>
-                </a>
               </div>
+
+              <a
+                href="https://github.com/wlr1/homepage"
+                className="hover:underline flex gap-1 my-auto"
+                target="_blank"
+              >
+                <FaGithub className="my-auto" size={13} />
+                <span>Source</span>
+              </a>
             </div>
 
             <div className="bg-amber-500 rounded-md h-[40px] w-[40px] flex my-auto cursor-pointer">

@@ -12,14 +12,12 @@ const HomeContent = () => {
         <div>
           {/* threejs something */}
           <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
-            <div className=" w-[640px] h-[640px] m-auto  absolute bottom-0 -top-96">
-              <ThreeModel />
-            </div>
+            <ThreeModel />
           </div>
 
           {/* content */}
-          <article className="relative opacity-100">
-            <div className="flex flex-col justify-center w-[486px]  mx-auto  ">
+          <article className="relative opacity-100  animate__animated animate__fadeInUp  ">
+            <div className="flex flex-col justify-center w-[486px]  mx-auto animate__animated animate__fadeIn animate__slower ">
               <div className=" flex justify-center mx-auto p-3 mb-4 w-[486px] rounded-md bg-white/5 backdrop-blur-lg">
                 Hello, I'm a fullstack web developer based in Latvia!
               </div>
