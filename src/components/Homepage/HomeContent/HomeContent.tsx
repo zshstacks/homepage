@@ -14,7 +14,6 @@ const HomeContent = () => {
           <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
             <ThreeModel />
           </div>
-
           {/* content */}
           <article className="relative opacity-100  animate__animated animate__fadeInUp  ">
             <div className="flex flex-col justify-center w-[486px]  mx-auto animate__animated animate__fadeIn animate__slower ">

@@ -7,21 +7,21 @@ import "animate.css";
 
 const WorksContent = () => {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <Header />
-      <div className="flex  justify-center mx-auto min-h-full w-[768px] ">
+      <div className="flex justify-center mx-auto min-h-screen w-[768px] ">
         <div>
           <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
             <ThreeModel />
           </div>
           <article className="relative opacity-100 text-white/80 animate__animated animate__fadeInUp ">
-            <div className="flex flex-col justify-center w-[486px]  mx-auto  animate__animated animate__fadeIn animate__slow">
+            <div className="flex flex-col justify-center w-[486px] mx-auto animate__animated animate__fadeIn animate__slow">
               <h3 className="font-bold text-xl mb-3 ">Works</h3>
               <div className="grid grid-cols-2 gap-x-4 gap-y-10 ">
                 <div>
                   <Link to="/works/workspace">
                     <img
-                      src="/workspace(r).png"
+                      src="/works/workspace/main.png"
                       alt=""
                       className="rounded-2xl"
                     />
@@ -35,14 +35,14 @@ const WorksContent = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link to="/works/todo">
+                  <Link to="/works/dropmusic">
                     <img
-                      src="/workspace(r).png"
+                      src="/works/workspace/main.png"
                       alt=""
                       className="rounded-2xl"
                     />
                     <div className="flex justify-center">
-                      <p className="text-xl">Todo</p>
+                      <p className="text-xl">DropMusic</p>
                     </div>
                     <p className="text-sm text-center">
                       A Markdown note-taking app with 100+ plugins,
@@ -51,14 +51,14 @@ const WorksContent = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link to="/works/weather">
+                  <Link to="/works/mybooks">
                     <img
-                      src="/workspace(r).png"
+                      src="/works/workspace/main.png"
                       alt=""
                       className="rounded-2xl"
                     />
                     <div className="flex justify-center">
-                      <p className="text-xl">Weather</p>
+                      <p className="text-xl">MyBooks</p>
                     </div>
                     <p className="text-sm text-center">
                       A Markdown note-taking app with 100+ plugins,
@@ -69,7 +69,7 @@ const WorksContent = () => {
                 <div>
                   <Link to="/works/calc">
                     <img
-                      src="/workspace(r).png"
+                      src="/works/workspace/main.png"
                       alt=""
                       className="rounded-2xl"
                     />

@@ -14,23 +14,36 @@ const projects = {
     description:
       "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
     stack: "React, TypeScript, Tailwind CSS",
-    image: "/workspace(r).png",
+    image: [
+      "/works/workspace/main.png",
+      "/works/workspace/appearance.png",
+      "/works/workspace/signin.png",
+      "/works/workspace/signup.png",
+    ],
     longDescription: "Detailed information about the Workspace project...",
   },
-  todo: {
-    title: "Todo",
+  dropmusic: {
+    title: "DropMusic",
     description:
       "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
     stack: "React, TypeScript, Tailwind CSS",
-    image: "/workspace(r).png",
+    image: [
+      "/works/dropmusic/drag.png",
+      "/works/dropmusic/main.png",
+      "/works/dropmusic/menu.png",
+    ],
     longDescription: "Detailed information about the Todo project...",
   },
-  weather: {
-    title: "Weather",
+  mybooks: {
+    title: "MyBooks",
     description:
       "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
     stack: "React, TypeScript, Tailwind CSS",
-    image: "/workspace(r).png",
+    image: [
+      "/works/mybooks/main.png",
+      "/works/mybooks/search.png",
+      "/works/mybooks/details.png",
+    ],
     longDescription: "Detailed information about the Weather project...",
   },
   calc: {
@@ -56,7 +69,7 @@ const WorkItem = () => {
     [ClassNames()]
   );
 
-  const SLIDE_COUNT = 5;
+  const SLIDE_COUNT = project?.image.length;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
 
   if (!project) {
@@ -65,9 +78,12 @@ const WorkItem = () => {
         <Header />
         <div className="text-white/80">
           <div className="flex justify-center min-h-screen">
-            <div className="mt-20">
+            <div className="m-auto">
               <h1 className="text-2xl font-bold">Project not found</h1>
-              <Link to="/works" className="text-blue-400 underline">
+              <Link
+                to="/works"
+                className="text-[#ff63c3] underline  flex justify-center"
+              >
                 Back to my works
               </Link>
             </div>
@@ -81,7 +97,7 @@ const WorkItem = () => {
   return (
     <div className="w-full">
       <Header />
-      <div className="flex  justify-center mx-auto min-h-full w-[768px]">
+      <div className="flex  justify-center mx-auto w-[768px]">
         <div>
           <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
             <ThreeModel />
@@ -124,7 +140,7 @@ const WorkItem = () => {
                         <div className="embla__slide" key={index}>
                           <div className="embla__slide__img">
                             <img
-                              src={project.image}
+                              src={project.image[index]}
                               alt=""
                               className="w-[486px] h-[233px] rounded-xl "
                             />
@@ -139,7 +155,7 @@ const WorkItem = () => {
           </article>
         </div>
       </div>
-      <div className="animate__animated animate__fadeIn animate__slow">
+      <div className="animate__animated animate__fadeIn animate__slow mt-36">
         <Footer />
       </div>
     </div>
