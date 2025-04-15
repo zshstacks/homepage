@@ -1,13 +1,9 @@
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
 import HomeContent from "./HomeContent/HomeContent";
 
 const Homepage = () => {
   return (
-    <div className="text-white/80 min-h-screen flex flex-col">
-      <Header />
+    <div className="text-white/80 dark:text-gray-800 min-h-screen flex flex-col ">
       <HomeContent />
-      <Footer />
     </div>
   );
 };

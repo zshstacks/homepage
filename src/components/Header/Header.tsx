@@ -1,11 +1,25 @@
+import { MyContext } from "@/App";
 import { HeaderProps } from "@/types/types";
+import { useContext, useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { MdOutlineLightMode } from "react-icons/md";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { useLocation, useNavigate } from "react-router";
 
 const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
+  const [animationClass, setAnimationClass] = useState("");
+
   const navigate = useNavigate();
   const location = useLocation();
+
+  const context = useContext(MyContext);
+
+  if (!context) {
+    throw new Error(
+      "The Header component should be used within MyContext.Provider."
+    );
+  }
+
+  const { theme, setTheme } = context;
 
   const handleNavigation = (path: string) => {
     if (handleContentChange) {
@@ -15,10 +29,26 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
     }
   };
 
+  const toggleTheme = () => {
+    setAnimationClass("animate__animated animate__bounceInDown animate__fast");
+
+    setTimeout(() => {
+      setAnimationClass("");
+    }, 1000);
+
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("dark", "light");
+    root.classList.add(theme);
+  }, [theme]);
+
   return (
-    <nav className="w-full backdrop-blur-lg fixed text-white/80  z-50">
-      <div className="w-[768px] h-[56px] flex  mx-auto px-2">
-        <div className="flex min-w-full gap-12 h-[40px]  my-auto ">
+    <nav className="w-full backdrop-blur-lg fixed text-white/80 dark:text-gray-800 z-50 dark:bg-white/25">
+      <div className="w-[768px] h-[56px] flex mx-auto px-2">
+        <div className="flex min-w-full gap-12 h-[40px] my-auto ">
           <div className="flex justify-between w-full my-auto">
             <div className="flex gap-x-4 my-auto">
               <h1 className="font-bold text-lg flex mr-4">
@@ -53,8 +83,21 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
               </a>
             </div>
 
-            <div className="bg-amber-500 rounded-md h-[40px] w-[40px] flex my-auto cursor-pointer">
-              <MdOutlineLightMode size={23} color="white" className="m-auto" />
+            <div
+              className={`bg-amber-500 rounded-md h-[40px] w-[40px] flex my-auto cursor-pointer ${animationClass} ${
+                theme === "dark" ? "bg-indigo-400 " : ""
+              }`}
+              onClick={toggleTheme}
+            >
+              {theme === "light" ? (
+                <MdOutlineLightMode
+                  size={23}
+                  color="black"
+                  className="m-auto"
+                />
+              ) : (
+                <MdDarkMode size={23} color="white" className="m-auto" />
+              )}
             </div>
           </div>
         </div>
