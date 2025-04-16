@@ -7,9 +7,11 @@ import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
 import ClassNames from "embla-carousel-class-names";
 import ThreeModel from "@/utils/ThreeModel/ThreeModel";
-import { projects } from "@/utils/ThreeModel/Works/Works";
+import { projects } from "@/utils/Works/Works";
+import { useTranslation } from "react-i18next";
 
 const WorkItem = () => {
+  const { t } = useTranslation();
   const { projectId } = useParams<{ projectId: string }>();
   const project = projectId
     ? projects[projectId as keyof typeof projects]
@@ -33,12 +35,12 @@ const WorkItem = () => {
         <div className="text-white/80 dark:text-gray-800">
           <div className="flex justify-center min-h-screen">
             <div className="m-auto">
-              <h1 className="text-2xl font-bold">Project not found</h1>
+              <h1 className="text-2xl font-bold">{t("notfound")}</h1>
               <Link
                 to="/works"
                 className="text-[#ff63c3] dark:text-indigo-400 underline  flex justify-center"
               >
-                Back to my works
+                {t("back")}
               </Link>
             </div>
           </div>
@@ -71,14 +73,14 @@ const WorkItem = () => {
                     to="/works"
                     className="text-[#ff63c3] dark:text-indigo-400 hover:underline cursor-pointer ml-1"
                   >
-                    Back to my works
+                    {t("back")}
                   </Link>
                 </h3>
               </div>
 
               {/* proj desc */}
               <p className="indent-[1em] hyphens-auto text-justify my-3">
-                {project.description}
+                {t(project.descriptionKey)}
               </p>
               {/* list of tech info */}
               <ul className="list-none w-[460px] mx-auto mb-6">

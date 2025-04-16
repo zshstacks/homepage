@@ -1,8 +1,7 @@
 export const projects = {
   workspace: {
     title: "Workspace",
-    description:
-      "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+    descriptionKey: "projects.workspace.description",
     stack: "React, TypeScript, Tailwind CSS",
     image: [
       "/works/workspace/main.png",
@@ -14,8 +13,7 @@ export const projects = {
   },
   dropmusic: {
     title: "DropMusic",
-    description:
-      "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+    descriptionKey: "projects.dropmusic.description",
     stack: "React, TypeScript, Tailwind CSS",
     image: [
       "/works/dropmusic/drag.png",
@@ -26,8 +24,7 @@ export const projects = {
   },
   mybooks: {
     title: "MyBooks",
-    description:
-      "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+    descriptionKey: "projects.mybooks.description",
     stack: "React, TypeScript, Tailwind CSS",
     image: [
       "/works/mybooks/main.png",
@@ -38,7 +35,7 @@ export const projects = {
   },
   calc: {
     title: "Calc",
-    description: "A Workspace app",
+    descriptionKey: "projects.calc.description",
     stack: "React, TypeScript, Tailwind CSS",
     image: "/workspace(r).png",
     longDescription: "Detailed information about the Calc project...",
