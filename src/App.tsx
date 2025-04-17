@@ -5,6 +5,8 @@ import NotFound from "./components/NotFound/NotFound";
 import WorkItem from "./components/Homepage/WorksContent/WorkItem/WorkItem";
 import { createContext, useState } from "react";
 import { ContextProps } from "./types/types";
+import SetupContent from "./components/Homepage/SetupContent/SetupContent";
+import SetupItem from "./components/Homepage/SetupContent/SetupItem/SetupItem";
 
 export const MyContext = createContext<ContextProps | null>(null);
 
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "/works/:projectId",
     element: <WorkItem />,
+  },
+  {
+    path: "/setup",
+    element: <SetupContent />,
+  },
+  {
+    path: "/setup/:setupId",
+    element: <SetupItem />,
   },
   {
     path: "*",

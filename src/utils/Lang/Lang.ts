@@ -6,12 +6,14 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         works: "Works",
+        setup: "Setup",
         source: "Source",
         welcome: "Hello, I'm a full-stack web developer based in Latvia!",
         name: "Edgar Grishin",
         position: "Full-stack developer",
         work: "Work",
-        workDesc: "Here is some cool description",
+        workDesc: `I am an independent full-stack developer from Latvia with a passion for creating innovative web solutions – from concept development and design to a finished product. Currently, I specialize in working with modern technologies like Golang (using the Gin framework) and React (in a TypeScript environment). In my daily work, I strive to find ways in which code can solve real problems and make people's lives more convenient.
+        When I’m not busy with programming or design, I enjoy expressing myself creatively – whether by experimenting with various new technologies or customizing applications and projects to give them a unique style. My goal is to continue growing and creating projects that inspire and help others.`,
         portfolio: "My portfolio",
         love: "I",
         loveDesc:
@@ -41,17 +43,47 @@ i18n.use(initReactI18next).init({
               "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
           },
         },
+        neovim: "Neovim",
+        neovimMin: "Neovim settings",
+        download: "Download",
+        pwsh: "Powershell",
+        pwshMin: "Powershell settings",
+        linux: "Arch Linux",
+        linuxMin: "Arch Linux dot-files",
+        vscode: "Visual Studio Code",
+        vscodeMin: "Visual Studio Code settings",
+        setups: {
+          neovim: {
+            description:
+              "My easy to setup neovim dot files. Also you can have errors related to Odin LSP — just delete Odin LSP config in lsp.lua file.",
+          },
+          pwsh: {
+            description:
+              "Here is my PowerShell configuration. I use oh-my-posh with takuya.omp.json.",
+          },
+          vscode: {
+            description: "My VS Code settings.json",
+          },
+          arch: {
+            description:
+              "Currently, I’m dual‑booting Windows and Arch Linux. I’m using the Hyprland tiling window manager; my configuration is based on HyDe Hyprdots with my personal adjustments.",
+          },
+        },
+        backSetup: "Back to my setups",
+        notfoundSetup: "Setup not found",
       },
     },
     lv: {
       translation: {
         works: "Darbi",
+        setup: "Konfigurācija",
         source: "Avots",
         welcome: "Labdien, esmu full-stack izstrādātājs Latvijā!",
         name: "Edgars Grišins",
         position: "Full-stack izstrādātājs",
         work: "Darbs",
-        workDesc: "šeit ir apraksts",
+        workDesc: `Esmu neatkarīgs full-stack izstrādātājs no Latvijas, kura aizraušanās ir veidot inovatīvus tīmekļa risinājumus – no idejas izstrādes un dizaina līdz gatavam produktam. Šobrīd specializējos darbā ar modernām tehnoloģijām, piemēram, Golang (ar Gin framework) un React (TypeScript vidē). Ikdienā cenšos atrast veidus, kā kods var atrisināt reālas problēmas un padarīt cilvēku dzīvi ērtāku.
+        Kad neesmu aizņemts ar programmēšanu vai dizainu, man patīk radoši izpausties – gan eksperimentējot ar dažādām jaunām tehnoloģijām, gan pielāgojot lietotnes un projektus, lai piešķirtu tiem unikālu stilu. Mans mērķis ir turpināt attīstīties un radīt projektus, kas iedvesmo un palīdz citiem.`,
         portfolio: "Mans portfelis",
         love: "Es",
         loveDesc:
@@ -78,6 +110,34 @@ i18n.use(initReactI18next).init({
             description: "Apraksts Calc projektam.",
           },
         },
+        neovim: "Neovim",
+        neovimMin: "Neovim iestatījumi",
+        download: "Lejupielādēt",
+        pwsh: "Powershell",
+        pwshMin: "Powershell iestatījumi",
+        linux: "Arch Linux",
+        linuxMin: "Arch Linux dot-files",
+        vscode: "Visual Studio Code",
+        vscodeMin: "Visual Studio Code iestatījumi",
+        setups: {
+          neovim: {
+            description:
+              "Mani viegli konfigurējamie Neovim dot faili. Iespējams, ka var rasties kļūdas, kas saistītas ar Odin LSP — vienkārši izdzēsiet Odin LSP konfigurāciju failā lsp.lua.",
+          },
+          pwsh: {
+            description:
+              "Šeit ir mana PowerShell konfigurācija. Es izmantoju oh-my-posh ar takuya.omp.json.",
+          },
+          vscode: {
+            description: "Mans VS Code settings.json",
+          },
+          arch: {
+            description:
+              "Pašlaik man ir dual-boot ar Windows un Arch Linux. Es izmantoju Hyprland tiling window manager; mana konfigurācija balstās uz HyDe hyprdots ar maniem personīgajiem pielāgojumiem.",
+          },
+        },
+        backSetup: "Atpakaļ pie manām konfigurācijām",
+        notfoundSetup: "Konfigurācija netika atrasta",
       },
     },
   },
