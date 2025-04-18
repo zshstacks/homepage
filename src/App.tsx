@@ -42,7 +42,7 @@ function App() {
 
   return (
     <MyContext.Provider value={{ theme, setTheme }}>
-      <div className="bg-[#202023] dark:bg-[#f0e7db] min-h-screen flex justify-center">
+      <div className="bg-[#202023] dark:bg-[#f0e7db] min-h-screen flex justify-center transition-colors duration-300">
         <RouterProvider router={router} />
       </div>
     </MyContext.Provider>

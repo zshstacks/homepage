@@ -1,8 +1,14 @@
-export const projects = {
+import { Works } from "@/types/types";
+
+export const projects: Record<string, Works> = {
   workspace: {
     title: "Workspace",
     descriptionKey: "projects.workspace.description",
-    stack: "React, TypeScript, Tailwind CSS",
+    stackName: "projects.workspace.stack",
+    stackKey:
+      "React, Redux, TypeScript, Tailwind CSS, Golang(Gin), MySQL, SupaBase, Redis",
+    sourceName: "projects.workspace.source",
+    sourceKey: "https://github.com/wlr1/workspace_go",
     image: [
       "/works/workspace/main.png",
       "/works/workspace/appearance.png",
@@ -14,7 +20,10 @@ export const projects = {
   dropmusic: {
     title: "DropMusic",
     descriptionKey: "projects.dropmusic.description",
-    stack: "React, TypeScript, Tailwind CSS",
+    stackName: "projects.workspace.stack",
+    stackKey: "React, TypeScript, Tailwind CSS",
+    sourceName: "projects.dropmusic.source",
+    sourceKey: "https://github.com/wlr1/DropMusic",
     image: [
       "/works/dropmusic/drag.png",
       "/works/dropmusic/main.png",
@@ -25,7 +34,10 @@ export const projects = {
   mybooks: {
     title: "MyBooks",
     descriptionKey: "projects.mybooks.description",
-    stack: "React, TypeScript, Tailwind CSS",
+    stackName: "projects.workspace.stack",
+    stackKey: "React, TypeScript, Tailwind CSS",
+    sourceName: "projects.mybooks.source",
+    sourceKey: "https://github.com/wlr1/MyBooks",
     image: [
       "/works/mybooks/main.png",
       "/works/mybooks/search.png",
@@ -36,8 +48,11 @@ export const projects = {
   calc: {
     title: "Calc",
     descriptionKey: "projects.calc.description",
-    stack: "React, TypeScript, Tailwind CSS",
-    image: "/workspace(r).png",
+    stackName: "projects.workspace.stack",
+    stackKey: "React, TypeScript, Tailwind CSS",
+    sourceName: "",
+    sourceKey: "",
+    image: ["/workspace(r).png"],
     longDescription: "Detailed information about the Calc project...",
   },
 };

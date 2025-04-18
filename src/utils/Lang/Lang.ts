@@ -20,7 +20,7 @@ i18n.use(initReactI18next).init({
           "Games, Games development, Music, Art, Customization, Programming",
         web: "On the web",
         workspaceDesc: "Here is some cool description",
-        dropmusicDesc: "Here is some cool description",
+        dropmusicDesc: "Here is somea cool description",
         mybooksDesc: "Here is some cool description",
         back: "Back to my works",
         notfound: "Project not found",
@@ -29,18 +29,26 @@ i18n.use(initReactI18next).init({
           workspace: {
             description:
               "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+            stack: "Stack",
+            source: "Source",
           },
           dropmusic: {
             description:
               "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+            stack: "Stack",
+            source: "Source",
           },
           mybooks: {
             description:
               "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+            stack: "Stack",
+            source: "Source",
           },
           calc: {
             description:
               "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+            stack: "Stack",
+            source: "Source",
           },
         },
         neovim: "Neovim",
@@ -55,7 +63,7 @@ i18n.use(initReactI18next).init({
         setups: {
           neovim: {
             description:
-              "My easy to setup neovim dot files. Also you can have errors related to Odin LSP — just delete Odin LSP config in lsp.lua file.",
+              "My easy to setup Neovim(LazyVim) dot files. Also you can have errors related to Odin LSP — just delete Odin LSP config in lsp.lua file.",
           },
           pwsh: {
             description:
@@ -99,15 +107,23 @@ i18n.use(initReactI18next).init({
           workspace: {
             description:
               "Markdown piezīmju lietotne ar 100+ spraudņiem, platformu neatkarīga un šifrēta datu sinhronizācija.",
+            stack: "Steks",
+            source: "Avots",
           },
           dropmusic: {
             description: "Ļoti cool apraksts DropMusic projektam.",
+            stack: "Steks",
+            source: "Avots",
           },
           mybooks: {
             description: "Apraksts MyBooks projektam.",
+            stack: "Steks",
+            source: "Avots",
           },
           calc: {
             description: "Apraksts Calc projektam.",
+            stack: "Steks",
+            source: "Avots",
           },
         },
         neovim: "Neovim",
@@ -122,7 +138,7 @@ i18n.use(initReactI18next).init({
         setups: {
           neovim: {
             description:
-              "Mani viegli konfigurējamie Neovim dot faili. Iespējams, ka var rasties kļūdas, kas saistītas ar Odin LSP — vienkārši izdzēsiet Odin LSP konfigurāciju failā lsp.lua.",
+              "Mani viegli konfigurējamie Neovim(LazyVim) dot faili. Iespējams, ka var rasties kļūdas, kas saistītas ar Odin LSP — vienkārši izdzēsiet Odin LSP konfigurāciju failā lsp.lua.",
           },
           pwsh: {
             description:

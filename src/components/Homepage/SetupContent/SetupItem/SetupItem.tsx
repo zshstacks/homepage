@@ -24,7 +24,7 @@ const SetupItem = () => {
               <h1 className="text-2xl font-bold">{t("notfoundSetup")}</h1>
               <Link
                 to="/setup"
-                className="text-[#ff63c3] dark:text-indigo-400 underline  flex justify-center"
+                className="text-[#ff63c3] dark:text-indigo-400 underline underline-offset-4  flex justify-center"
               >
                 {t("backSetup")}
               </Link>
@@ -38,14 +38,17 @@ const SetupItem = () => {
 
   return (
     <div className="w-full">
-      <Header />
-      <div className="flex  justify-center mx-auto w-[768px]">
+      <div className="flex justify-center">
+        <Header />
+      </div>
+
+      <div className="flex justify-center mx-auto w-full px-4 md:w-[768px] min-h-screen">
         <div>
-          <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
+          <div className=" w-full max-w-[90%] md:max-w-[640px] -mt-[120px] -mb-[200px] h-[650px] touch-none mx-auto my-8">
             <ThreeModel />
           </div>
           <article className="relative opacity-100 text-white/80 dark:text-gray-800 animate__animated animate__fadeIn">
-            <div className="flex flex-col justify-center w-[486px]  mx-auto  ">
+            <div className="flex flex-col justify-center w-full xs:w-[300px] sm:w-[400px] md:w-[486px] mx-auto  ">
               {/* back */}
               <div>
                 <h3 className="flex ">
@@ -57,7 +60,7 @@ const SetupItem = () => {
                   </span>
                   <Link
                     to="/setup"
-                    className="text-[#ff63c3] dark:text-indigo-400 hover:underline cursor-pointer ml-1"
+                    className="text-[#ff63c3] dark:text-indigo-400 hover:underline hover:underline-offset-4 cursor-pointer ml-1"
                   >
                     {t("backSetup")}
                   </Link>
@@ -75,7 +78,7 @@ const SetupItem = () => {
                   <div className="mx-auto">
                     <MdOutlineArrowDownward
                       size={23}
-                      className=" mx-auto animate-pulse"
+                      className=" mx-auto animate-pulse "
                     />
                     <a
                       href={setup.download}
@@ -91,7 +94,7 @@ const SetupItem = () => {
               <section className="grid grid-cols-1 gap-3">
                 {img.map((index) => (
                   <div key={index}>
-                    <div className="hover:scale-150 transition-all duration-200 cursor-zoom-in ">
+                    <div className="hover:scale-150 transition-all duration-200 ease-in cursor-zoom-in ">
                       <img
                         src={setup.image[index]}
                         alt="neovim setup"

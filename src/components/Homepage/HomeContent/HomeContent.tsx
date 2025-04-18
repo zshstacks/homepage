@@ -19,7 +19,7 @@ const HomeContent = () => {
       </div>
 
       {/* main content */}
-      <div className="mx-auto min-h-screen max-w-[768px] px-3 xs:px-4 sm:px-6 pt-[70px]">
+      <div className="mx-auto min-h-screen max-w-[768px] px-3 xs:px-4 sm:px-6 pt-[70px] ">
         <div>
           {/* threejs something */}
           <div className="w-full max-w-[90%] md:max-w-[640px] -mt-[120px] -mb-[200px] h-[650px] touch-none mx-auto my-8">

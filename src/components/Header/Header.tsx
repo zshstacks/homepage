@@ -95,7 +95,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
                 <div className="flex">
                   <button
                     onClick={() => handleNavigation("/works")}
-                    className={`hover:underline cursor-pointer p-2 ${
+                    className={`hover:underline hover:underline-offset-4 cursor-pointer p-2 ${
                       location.pathname === "/works"
                         ? "bg-[#81e6d9] text-black"
                         : ""
@@ -107,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
 
                 <button
                   onClick={() => handleNavigation("/setup")}
-                  className={`cursor-pointer p-2 hover:underline ${
+                  className={`cursor-pointer p-2 hover:underline hover:underline-offset-4 ${
                     location.pathname === "/setup"
                       ? "bg-[#81e6d9] text-black"
                       : ""
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
 
                 <a
                   href="https://github.com/wlr1/homepage"
-                  className="hover:underline flex gap-1 items-center"
+                  className="hover:underline hover:underline-offset-4 flex gap-1 items-center"
                   target="_blank"
                 >
                   <FaGithub className="my-auto" size={13} />
@@ -172,10 +172,10 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
               </div>
 
               {/* mobile */}
-              <div className="md:hidden">
+              <div className="md:hidden ">
                 <button
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="p-2 cursor-pointer"
+                  className="p-2 cursor-pointer "
                 >
                   {menuOpen ? (
                     <IoClose size={24} />
@@ -219,7 +219,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
               <span>{t("source")}</span>
             </a>
 
-            <div className="flex gap-2 pt-2 border-t border-gray-600 dark:border-gray-300">
+            <div className="flex justify-center gap-2 pt-2 border-t border-gray-600 dark:border-gray-300">
               {/* Theme toggle mobile */}
               <div
                 className={`bg-amber-500 rounded-md h-[40px] w-[40px] flex cursor-pointer ${animationClass} ${

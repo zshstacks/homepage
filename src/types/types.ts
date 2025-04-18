@@ -14,3 +14,28 @@ export interface Setup {
   longDescription: string;
   download: string;
 }
+
+export interface Works {
+  title: string;
+  descriptionKey: string;
+  stackName: string;
+  stackKey: string;
+  sourceName: string;
+  sourceKey: string;
+  image: string[];
+  longDescription: string;
+}
+
+export interface WorkItemProps {
+  to: string;
+  src: string;
+  title: string;
+  descKey: string;
+}
+
+export interface SetupItemProps {
+  to: string;
+  src: string;
+  title: string;
+  descKey: string;
+}

@@ -38,7 +38,7 @@ const WorkItem = () => {
               <h1 className="text-2xl font-bold">{t("notfound")}</h1>
               <Link
                 to="/works"
-                className="text-[#ff63c3] dark:text-indigo-400 underline  flex justify-center"
+                className="text-[#ff63c3] dark:text-indigo-400 underline underline-offset-4  flex justify-center"
               >
                 {t("back")}
               </Link>
@@ -52,14 +52,17 @@ const WorkItem = () => {
 
   return (
     <div className="w-full">
-      <Header />
-      <div className="flex  justify-center mx-auto w-[768px]">
+      <div className="flex justify-center">
+        <Header />
+      </div>
+
+      <div className="flex justify-center mx-auto w-full px-4 md:w-[768px] min-h-screen">
         <div>
-          <div className=" w-[640px] h-[640px] touch-none -mt-[120px] -mb-[200px] ">
+          <div className="w-full max-w-[90%] md:max-w-[640px] -mt-[120px] -mb-[200px] h-[650px] touch-none mx-auto my-8">
             <ThreeModel />
           </div>
           <article className="relative opacity-100 text-white/80 dark:text-gray-800 animate__animated animate__fadeIn">
-            <div className="flex flex-col justify-center w-[486px]  mx-auto  ">
+            <div className="flex flex-col justify-center w-full xs:w-[420px] sm:w-[420px] md:w-[486px] mx-auto ">
               {/* back */}
               <div>
                 <h3 className="flex ">
@@ -71,7 +74,7 @@ const WorkItem = () => {
                   </span>
                   <Link
                     to="/works"
-                    className="text-[#ff63c3] dark:text-indigo-400 hover:underline cursor-pointer ml-1"
+                    className="text-[#ff63c3] dark:text-indigo-400 hover:underline hover:underline-offset-4 cursor-pointer ml-1"
                   >
                     {t("back")}
                   </Link>
@@ -83,26 +86,32 @@ const WorkItem = () => {
                 {t(project.descriptionKey)}
               </p>
               {/* list of tech info */}
-              <ul className="list-none w-[460px] mx-auto mb-6">
+              <ul className="list-none xs:w-[300px] sm:w-[400px] md:w-[460px]  mx-auto mb-6">
                 <li className="text-start">
                   <span className="uppercase text-sm font-semibold bg-[#9ae6b4]/20 dark:bg-[#9ae6b4]/50 text-[#9ae6b4] dark:text-[#38543d] text-center min-w-[45px] max-w-[65px] inline-block mr-2">
-                    Stack
+                    {t(project.stackName)}
                   </span>
-                  <span>{project.stack}</span>
+                  <span>{t(project.stackKey)}</span>
                 </li>
               </ul>
+              {/* source */}
+              <div className="flex justify-center mb-3 text-[#ff63c3] hover:underline hover:underline-offset-4">
+                <a href={project.sourceKey} target="_blank">
+                  {t(project.sourceName)}
+                </a>
+              </div>
               {/* img slider */}
               <div className="">
                 <section className="embla">
                   <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="embla__container">
+                    <div className="embla__container ">
                       {slides.map((index) => (
-                        <div className="embla__slide" key={index}>
-                          <div className="embla__slide__img">
+                        <div className="embla__slide " key={index}>
+                          <div className="embla__slide__img ">
                             <img
                               src={project.image[index]}
                               alt=""
-                              className="w-[486px] h-[233px] rounded-xl "
+                              className="sm:w-[486px]  h-[233px] rounded-xl mx-auto"
                             />
                           </div>
                         </div>

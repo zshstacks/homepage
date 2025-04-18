@@ -37,6 +37,17 @@
   object-fit: cover;
 }
 
+@media (max-width: 420px) {
+  .embla {
+    max-width: 100%;
+    --slide-size: 90%;
+  }
+  .embla__slide {
+    min-width: auto;
+    flex: 0 0 var(--slide-size);
+  }
+}
+
 .embla__slide {
   transition: opacity 0.2s ease-in-out;
 }
