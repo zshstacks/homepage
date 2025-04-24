@@ -10,7 +10,7 @@ export const setups: Record<string, Setup> = {
       "/setup/neovim/expl.png",
       "/setup/neovim/conf.png",
     ],
-    download: "https://github.com/wlr1/nvim-dotfiles",
+    download: "https://github.com/zshstacks/nvim-dotfiles",
     longDescription: "Detailed information about the neovim...",
   },
   pwsh: {
@@ -45,7 +45,7 @@ export const setups: Record<string, Setup> = {
       "/setup/linux/arch2.png",
       "/setup/linux/arch3.png",
     ],
-    download: "https://github.com/wlr1/hyprdots",
+    download: "https://github.com/zshstacks/hyprdots",
     longDescription: "Detailed information about the arch...",
   },
 };

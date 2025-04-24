@@ -8,7 +8,7 @@ export const projects: Record<string, Works> = {
     stackKey:
       "React, Redux, TypeScript, Tailwind CSS, Golang(Gin), MySQL, SupaBase, Redis",
     sourceName: "projects.workspace.source",
-    sourceKey: "https://github.com/wlr1/workspace_go",
+    sourceKey: "https://github.com/zshstacks/workspace_go",
     image: [
       "/works/workspace/main.png",
       "/works/workspace/appearance.png",
@@ -23,7 +23,7 @@ export const projects: Record<string, Works> = {
     stackName: "projects.workspace.stack",
     stackKey: "React, TypeScript, Tailwind CSS",
     sourceName: "projects.dropmusic.source",
-    sourceKey: "https://github.com/wlr1/DropMusic",
+    sourceKey: "https://github.com/zshstacks/DropMusic",
     image: [
       "/works/dropmusic/drag.png",
       "/works/dropmusic/main.png",
@@ -37,7 +37,7 @@ export const projects: Record<string, Works> = {
     stackName: "projects.workspace.stack",
     stackKey: "React, TypeScript, Tailwind CSS",
     sourceName: "projects.mybooks.source",
-    sourceKey: "https://github.com/wlr1/MyBooks",
+    sourceKey: "https://github.com/zshstacks/MyBooks",
     image: [
       "/works/mybooks/main.png",
       "/works/mybooks/search.png",

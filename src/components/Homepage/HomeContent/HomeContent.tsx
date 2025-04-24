@@ -70,12 +70,12 @@ const HomeContent = () => {
                 </h3>
                 <ul className="font-bold text-[#81e6d9] dark:text-[#2c7a7b]">
                   <li>
-                    <a href="https://github.com/wlr1" target="_blank">
+                    <a href="https://github.com/zshstacks" target="_blank">
                       <button className="hover:bg-[#81e6d9]/20 dark:hover:bg-[#81e6d9]/50 transition-all duration-200 rounded-md p-2 w-full sm:max-w-40 cursor-pointer flex">
                         <span className="my-auto">
                           <FaGithub className="mr-2" />
                         </span>
-                        @wlr1
+                        @zshstacks
                       </button>
                     </a>
                   </li>
