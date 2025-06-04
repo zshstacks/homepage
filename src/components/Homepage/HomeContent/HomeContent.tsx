@@ -80,12 +80,12 @@ const HomeContent = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://x.com/wlr1_dev" target="_blank">
+                    <a href="https://x.com/zshstacks" target="_blank">
                       <button className="hover:bg-[#81e6d9]/20 dark:hover:bg-[#81e6d9]/50 transition-all duration-200 rounded-md p-2 w-full sm:max-w-40 cursor-pointer flex">
                         <span className="my-auto">
                           <FaSquareXTwitter className="mr-2" />
                         </span>
-                        @wlr1_dev
+                        @zshstacks
                       </button>
                     </a>
                   </li>

@@ -117,7 +117,7 @@ const Header: React.FC<HeaderProps> = ({ handleContentChange }) => {
                 </button>
 
                 <a
-                  href="https://github.com/wlr1/homepage"
+                  href="https://github.com/zshstacks/homepage"
                   className="hover:underline hover:underline-offset-4 flex gap-1 items-center"
                   target="_blank"
                 >
