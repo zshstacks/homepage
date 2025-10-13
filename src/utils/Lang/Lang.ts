@@ -28,7 +28,7 @@ i18n.use(initReactI18next).init({
         projects: {
           workspace: {
             description:
-              "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+              "An interactive, fully containerized workspace application featuring productivity and communication tools with Docker support for seamless development and deployment.",
             stack: "Stack",
             source: "Source",
           },
@@ -63,7 +63,7 @@ i18n.use(initReactI18next).init({
         setups: {
           neovim: {
             description:
-              "My easy to setup Neovim(LazyVim) dot files. Also you can have errors related to Odin LSP — just delete Odin LSP config in lsp.lua file.",
+              "My easy to setup Neovim(LazyVim) dot files.",
           },
           pwsh: {
             description:
@@ -106,7 +106,7 @@ i18n.use(initReactI18next).init({
         projects: {
           workspace: {
             description:
-              "Markdown piezīmju lietotne ar 100+ spraudņiem, platformu neatkarīga un šifrēta datu sinhronizācija.",
+              "Interaktīva, pilnībā konteinerizēta darba vides lietotne, kas piedāvā produktivitātes un komunikācijas rīkus un nodrošina Docker atbalstu, lai izstrāde un izvietošana noritētu vienmērīgi.",
             stack: "Steks",
             source: "Avots",
           },
@@ -138,7 +138,7 @@ i18n.use(initReactI18next).init({
         setups: {
           neovim: {
             description:
-              "Mani viegli konfigurējamie Neovim(LazyVim) dot faili. Iespējams, ka var rasties kļūdas, kas saistītas ar Odin LSP — vienkārši izdzēsiet Odin LSP konfigurāciju failā lsp.lua.",
+              "Mani viegli konfigurējamie Neovim(LazyVim) dot faili.",
           },
           pwsh: {
             description:

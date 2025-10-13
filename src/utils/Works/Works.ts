@@ -6,7 +6,7 @@ export const projects: Record<string, Works> = {
     descriptionKey: "projects.workspace.description",
     stackName: "projects.workspace.stack",
     stackKey:
-      "React, Redux, TypeScript, Tailwind CSS, Golang(Gin), MySQL, SupaBase, Redis",
+      "React, Redux, TypeScript, Tailwind CSS, Golang(Gin), MySQL, SupaBase, Redis, Docker",
     sourceName: "projects.workspace.source",
     sourceKey: "https://github.com/zshstacks/workspace_go",
     image: [
