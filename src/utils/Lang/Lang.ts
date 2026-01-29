@@ -12,29 +12,36 @@ i18n.use(initReactI18next).init({
         name: "Edgar Grishin",
         position: "Full-stack developer",
         work: "Work",
-        workDesc: `I am an independent full-stack developer from Latvia with a passion for creating innovative web solutions – from concept development and design to a finished product. Currently, I specialize in working with modern technologies like Golang (using the Gin framework) and React (in a TypeScript environment). In my daily work, I strive to find ways in which code can solve real problems and make people's lives more convenient.
+        workDesc: `I am an independent full-stack developer from Latvia with a passion for creating innovative web solutions – from concept development and design to a finished product. Currently, I specialize in working with modern technologies like Golang (using the Gin/Echo frameworks) and React (in a TypeScript environment). In my daily work, I strive to find ways in which code can solve real problems and make people's lives more convenient.
         When I’m not busy with programming or design, I enjoy expressing myself creatively – whether by experimenting with various new technologies or customizing applications and projects to give them a unique style. My goal is to continue growing and creating projects that inspire and help others.`,
         portfolio: "My portfolio",
         love: "I",
         loveDesc:
           "Games, Games development, Music, Art, Customization, Programming",
         web: "On the web",
-        workspaceDesc: "Here is some cool description",
+        workspaceDesc:
+          "An interactive, fully web-based “workspace” application featuring productivity and communication tools.",
         dropmusicDesc: "Here is somea cool description",
         mybooksDesc: "Here is some cool description",
+        sublimeDesc: "A comprehensive full-stack web platform combining real-time uptime monitoring and live cryptocurrency tracking capabilities.",
         back: "Back to my works",
         notfound: "Project not found",
-        footer: "© 2025 Edgar Grishin. All Rights Reserved.",
+        footer: "© 2026 Edgar Grishin. All Rights Reserved.",
         projects: {
           workspace: {
             description:
-              "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+              "This application provides a convenient “workspace” environment where users can switch between various tools and customize the interface to their needs. The backend is built with Go (Gin, WebSocket, MySQL, Redis, JWT cookie, OAuth) and the frontend uses Next.js, React, TypeScript, Redux, Supabase and Tailwind CSS.",
             stack: "Stack",
             source: "Source",
           },
           dropmusic: {
             description:
               "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support",
+            stack: "Stack",
+            source: "Source",
+          },
+          sublime: {
+            description: "SublimeHub is a full-stack web platform that combines critical service monitoring with real-time financial data analysis. The project consists of two core modules: a high-precision Uptime Monitor for tracking server availability, and a Crypto Tracker providing live market data via WebSockets. Built with Go (Echo) and Next.js, it showcases a modern architecture (Modular Monolith & Feature-based), secure JWT/OAuth2 authentication, and a seamless user experience.",
             stack: "Stack",
             source: "Source",
           },
@@ -81,6 +88,7 @@ i18n.use(initReactI18next).init({
         notfoundSetup: "Setup not found",
       },
     },
+    //LV
     lv: {
       translation: {
         works: "Darbi",
@@ -90,23 +98,30 @@ i18n.use(initReactI18next).init({
         name: "Edgars Grišins",
         position: "Full-stack izstrādātājs",
         work: "Darbs",
-        workDesc: `Esmu neatkarīgs full-stack izstrādātājs no Latvijas, kura aizraušanās ir veidot inovatīvus tīmekļa risinājumus – no idejas izstrādes un dizaina līdz gatavam produktam. Šobrīd specializējos darbā ar modernām tehnoloģijām, piemēram, Golang (ar Gin framework) un React (TypeScript vidē). Ikdienā cenšos atrast veidus, kā kods var atrisināt reālas problēmas un padarīt cilvēku dzīvi ērtāku.
+        workDesc: `Esmu neatkarīgs full-stack izstrādātājs no Latvijas, kura aizraušanās ir veidot inovatīvus tīmekļa risinājumus – no idejas izstrādes un dizaina līdz gatavam produktam. Šobrīd specializējos darbā ar modernām tehnoloģijām, piemēram, Golang (ar Gin/Echo frameworku) un React (TypeScript vidē). Ikdienā cenšos atrast veidus, kā kods var atrisināt reālas problēmas un padarīt cilvēku dzīvi ērtāku.
         Kad neesmu aizņemts ar programmēšanu vai dizainu, man patīk radoši izpausties – gan eksperimentējot ar dažādām jaunām tehnoloģijām, gan pielāgojot lietotnes un projektus, lai piešķirtu tiem unikālu stilu. Mans mērķis ir turpināt attīstīties un radīt projektus, kas iedvesmo un palīdz citiem.`,
         portfolio: "Mans portfelis",
         love: "Es",
         loveDesc:
           "Spēles, Spēļu izstrāde, Mūzika, Māksla, Pielāgošana, Programmēšana",
         web: "Tiešsaistē",
-        workspaceDesc: "šeit ir apraksts",
+        workspaceDesc:
+          "Interaktīva, pilnībā tīmeklī balstīta “darbvietas” lietojumprogramma ar produktivitātes un saziņas rīkiem.",
         dropmusicDesc: "šeit ir apraksts",
         mybooksDesc: "šeit ir apraksts",
+        sublimeDesc: "Visaptveroša full-stack tīmekļa platforma, kas apvieno reāllaika uptime monitoringu un live kriptovalūtu izsekošanas iespējas.",
         back: "Atpakaļ pie maniem darbiem",
         notfound: "Projekts netika atrasts",
-        footer: " © 2025 Edgars Grišins. Visas tiesības aizsargātas.",
+        footer: " © 2026 Edgars Grišins. Visas tiesības aizsargātas.",
         projects: {
           workspace: {
             description:
-              "Markdown piezīmju lietotne ar 100+ spraudņiem, platformu neatkarīga un šifrēta datu sinhronizācija.",
+              "Šī lietojumprogramma nodrošina ērtu “darba telpas” vidi, kur lietotāji var pārslēgties starp dažādiem rīkiem un pielāgot saskarni savām vajadzībām. Sistēmas aizmugure ir veidota, izmantojot Go (Gin, WebSocket, MySQL, Redis, JWT cookie, OAuth), un front-end izmanto Next.js, React, TypeScript, Redux, Supabase un Tailwind CSS.",
+            stack: "Steks",
+            source: "Avots",
+          },
+          sublime: {
+            description: "SublimeHub ir full-stack tīmekļa platforma, kas apvieno kritiski svarīgu pakalpojumu uzraudzību ar reāllaika finanšu datu analīzi. Projekts sastāv no diviem galvenajiem moduļiem: augstas precizitātes Uptime Monitor, kas seko līdzi serveru pieejamībai, un Crypto Tracker, kas nodrošina tiešraides tirgus datus, izmantojot WebSockets. Izstrādāts, izmantojot Go (Echo) un Next.js, tas demonstrē modernu arhitektūru (Modular Monolith & Feature-based), drošu JWT/OAuth2 autentifikāciju un plūstošu lietotāja pieredzi.",
             stack: "Steks",
             source: "Avots",
           },

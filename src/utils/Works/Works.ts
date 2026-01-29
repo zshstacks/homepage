@@ -45,6 +45,21 @@ export const projects: Record<string, Works> = {
     ],
     longDescription: "Detailed information about the Weather project...",
   },
+  sublime: {
+    title: "SublimeHub",
+    descriptionKey: "projects.sublime.description",
+    stackName: "projects.sublime.stack",
+    stackKey: "Next.js, React, TypeScript, Redux, Tailwind CSS, Golang, Echo, Websockets, Postgresql",
+    sourceName: "projects.sublime.source",
+    sourceKey: "https://github.com/zshstacks/sublime-hub",
+    image: [
+      "/works/sublime/login.png",
+      "/works/sublime/crypto.png",
+      "/works/sublime/monitor.png",
+      "/works/sublime/landing.png",
+    ],
+    longDescription: "Detailed information about the Sublime project...",
+  },
   calc: {
     title: "Calc",
     descriptionKey: "projects.calc.description",

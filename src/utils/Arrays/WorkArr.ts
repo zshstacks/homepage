@@ -6,6 +6,12 @@ export const items = [
     descKey: "workspaceDesc",
   },
   {
+    to: "/works/sublime",
+    src: "/works/sublime/landing.png",
+    title: "SublimeHub",
+    descKey: "sublimeDesc",
+  },
+  {
     to: "/works/dropmusic",
     src: "/works/dropmusic/main.png",
     title: "DropMusic",
@@ -23,4 +29,5 @@ export const items = [
     title: "MyBooks",
     descKey: "mybooksDesc",
   },
+
 ];
