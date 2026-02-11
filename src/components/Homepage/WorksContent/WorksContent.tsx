@@ -19,7 +19,7 @@ const WorkDynamic = memo<WorkItemProps>(({ to, src, title, descKey }) => {
             src={src}
             alt={title}
             className="rounded-2xl w-full transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
+            fetchPriority="high"
           />
         </div>
         <div className="flex justify-center">
