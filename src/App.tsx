@@ -3,12 +3,14 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
+  Outlet,
 } from "react-router";
 import { createContext, useState, useEffect, lazy, Suspense } from "react";
 import { ContextProps } from "./types/types";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import { items as workItems } from "./utils/Arrays/WorkArr";
 import { items as setupItems } from "./utils/Arrays/SetupArr";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop.tsx";
 
 const Homepage = lazy(() => import("./components/Homepage/Homepage"));
 const WorksContent = lazy(
@@ -51,16 +53,23 @@ const getInitialTheme = (): "dark" | "light" => {
   return "light";
 };
 
+const RootLayout = () => (
+  <>
+    <ScrollToTop />
+    <Outlet />
+  </>
+);
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <>
+    <Route element={<RootLayout />}>
       <Route path="/" element={<Homepage />} />
       <Route path="/works" element={<WorksContent />} />
       <Route path="/works/:projectId" element={<WorkItem />} />
       <Route path="/setup" element={<SetupContent />} />
       <Route path="/setup/:setupId" element={<SetupItem />} />
       <Route path="*" element={<NotFound />} />
-    </>,
+    </Route>,
   ),
 );
 
