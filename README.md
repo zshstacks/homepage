@@ -98,8 +98,7 @@ http://localhost:5173
 This project is [MIT](./LICENSE) licensed.
 
 ##  Author
-- Website: [Your Portfolio URL]
 - GitHub: [@zshstacks](https://github.com/zshstacks)
-- Twitter: [@zshstacks](https://twitter.com/zshstacks)
+
 
 
