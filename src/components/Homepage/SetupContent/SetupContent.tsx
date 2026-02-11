@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import Footer from "@/components/Footer/Footer";
@@ -37,6 +37,13 @@ SetupDynamic.displayName = "SetupDynamic";
 const SetupContent = () => {
   const { t } = useTranslation();
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="w-full">
       <div className="flex justify-center">
@@ -49,8 +56,14 @@ const SetupContent = () => {
             <ThreeModel />
           </div>
 
-          <main className="relative opacity-100 text-white/80 dark:text-gray-800 animate__animated animate__fadeInUp">
-            <div className="flex flex-col justify-center w-full mx-auto animate__animated animate__fadeIn animate__slow xs:w-[300px] sm:w-[400px] md:w-[486px]">
+          <main
+            className={` relative text-white/80 dark:text-gray-800 transition-all duration-700 ease-out transform ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
+            <div className="flex flex-col justify-center w-full mx-auto xs:w-[300px] sm:w-[400px] md:w-[486px]">
               <h2 className="font-bold text-2xl mb-6 border-b border-white/10 dark:border-gray-800/20 pb-2">
                 {t("setup")}
               </h2>

@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import "animate.css";
@@ -37,6 +37,12 @@ WorkDynamic.displayName = "WorkDynamic";
 
 const WorksContent = () => {
   const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const { mainWorks, oldWorks } = useMemo(() => {
     return {
@@ -57,8 +63,14 @@ const WorksContent = () => {
             <ThreeModel />
           </div>
 
-          <main className="relative opacity-100 text-white/80 dark:text-gray-800 animate__animated animate__fadeInUp">
-            <div className="flex flex-col justify-center w-full xs:w-[300px] sm:w-[400px] md:w-[486px] mx-auto animate__animated animate__fadeIn animate__slow">
+          <main
+            className={`relative text-white/80 dark:text-gray-800 transition-all duration-700 ease-out transform ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
+            <div className="flex flex-col justify-center w-full xs:w-[300px] sm:w-[400px] md:w-[486px] mx-auto ">
               <section className="mb-20" aria-labelledby="main-projects">
                 <h2
                   id="main-projects"

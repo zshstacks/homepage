@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { FaGithub } from "react-icons/fa";
@@ -12,24 +12,36 @@ import ThreeModel from "@/utils/ThreeModel/ThreeModel";
 const HomeContent = memo(() => {
   const { t } = useTranslation();
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="w-full text-white/80 dark:text-gray-800 min-h-screen flex flex-col">
+    <div className="w-full text-white/80 dark:text-gray-800 flex flex-col">
       <div className="flex justify-center">
         <Header />
       </div>
 
-      <main className="mx-auto min-h-screen max-w-[768px] px-3 xs:px-4 sm:px-6 pt-[70px]">
+      <main className="flex-grow w-full max-w-[768px] px-3 xs:px-4 sm:px-6 pt-[70px] pb-8">
         <div>
           <div className="w-full max-w-[90%] md:max-w-[640px] -mt-[120px] -mb-[200px] h-[650px] touch-none mx-auto my-8">
             <ThreeModel />
           </div>
 
-          <article className="relative opacity-100 animate__animated animate__fadeInUp">
-            <div className="flex flex-col justify-center w-full xs:max-w-[400px] sm:max-w-[486px] max-w-[320px] mx-auto animate__animated animate__fadeIn animate__slower">
+          <article
+            className={`transition-all duration-1000 ease-out ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
+            <div className="flex flex-col justify-center w-full xs:max-w-[400px] sm:max-w-[486px] max-w-[320px] mx-auto ">
               <div className="flex justify-center mx-auto xs:p-3 xs:mb-4 p-3 mb-4 w-full rounded-md bg-white/5 dark:bg-white/40 backdrop-blur-lg">
                 {t("welcome")}
               </div>
-
               <div className="flex flex-col gap-1 w-full items-center mb-6">
                 <h1 className="font-bold text-3xl xs:text-3xl sm:text-4xl text-center">
                   {t("name")}
@@ -38,7 +50,6 @@ const HomeContent = memo(() => {
                   {t("position")}
                 </p>
               </div>
-
               <section className="w-full mb-4">
                 <h2 className="font-bold text-xl border-b-4 border-b-white/20 dark:border-b-gray-800/70 w-fit mt-6 mb-2 xs:mt-6">
                   {t("work")}
@@ -59,7 +70,6 @@ const HomeContent = memo(() => {
                   </Link>
                 </div>
               </section>
-
               <section className="w-full mb-4">
                 <h2 className="font-bold text-xl border-b-4 border-b-white/20 dark:border-b-gray-800/70 w-fit mb-2">
                   {t("love")} <span aria-hidden="true">♥</span>
@@ -68,7 +78,6 @@ const HomeContent = memo(() => {
                   {t("loveDesc")}
                 </p>
               </section>
-
               <section className="w-full mt-4 xs:mt-4">
                 <h2 className="font-bold text-xl border-b-4 border-b-white/20 dark:border-b-gray-800/70 w-fit mb-2">
                   {t("web")}
