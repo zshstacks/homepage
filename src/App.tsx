@@ -27,7 +27,7 @@ const NotFound = lazy(() => import("./components/NotFound/NotFound"));
 
 const LoadingFallback = () => (
   <div className="flex items-center justify-center min-h-screen bg-[#202023] dark:bg-[#f0e7db]">
-    <div className="text-white/80 dark:text-gray-800">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#202023] dark:bg-[#f0e7db]">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#ff63c3] dark:border-indigo-400"></div>
     </div>
   </div>
@@ -103,9 +103,7 @@ function App() {
   return (
     <ErrorBoundary>
       <MyContext.Provider value={{ theme, setTheme }}>
-        <div
-          className={`${theme === "dark" ? "dark" : ""} bg-[#202023] dark:bg-[#f0e7db] min-h-screen flex justify-center transition-colors duration-300`}
-        >
+        <div className="min-h-screen flex justify-center">
           <Suspense fallback={<LoadingFallback />}>
             <RouterProvider router={router} />
           </Suspense>

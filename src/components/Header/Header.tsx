@@ -58,12 +58,6 @@ const Header = memo<HeaderProps>(({ handleContentChange }) => {
   }, [setTheme]);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove("dark", "light");
-    root.classList.add(theme);
-  }, [theme]);
-
-  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && menuOpen) {
         setMenuOpen(false);

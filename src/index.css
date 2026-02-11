@@ -10,6 +10,15 @@
   box-sizing: border-box;
 }
 
+
+html, body {
+  @apply bg-[#202023] transition-colors duration-300;
+}
+
+html.dark body {
+  @apply bg-[#f0e7db];
+}
+
 .embla {
   max-width: 48rem;
   margin: auto;
