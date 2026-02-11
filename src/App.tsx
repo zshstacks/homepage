@@ -1,51 +1,97 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-import Homepage from "./components/Homepage/Homepage";
-import WorksContent from "./components/Homepage/WorksContent/WorksContent";
-import NotFound from "./components/NotFound/NotFound";
-import WorkItem from "./components/Homepage/WorksContent/WorkItem/WorkItem";
-import { createContext, useState } from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+} from "react-router";
+import { createContext, useState, useEffect, lazy, Suspense } from "react";
 import { ContextProps } from "./types/types";
-import SetupContent from "./components/Homepage/SetupContent/SetupContent";
-import SetupItem from "./components/Homepage/SetupContent/SetupItem/SetupItem";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+
+
+const Homepage = lazy(() => import("./components/Homepage/Homepage"));
+const WorksContent = lazy(() => import("./components/Homepage/WorksContent/WorksContent"));
+const WorkItem = lazy(() => import("./components/Homepage/WorksContent/WorkItem/WorkItem"));
+const SetupContent = lazy(() => import("./components/Homepage/SetupContent/SetupContent"));
+const SetupItem = lazy(() => import("./components/Homepage/SetupContent/SetupItem/SetupItem"));
+const NotFound = lazy(() => import("./components/NotFound/NotFound"));
+
+
+const LoadingFallback = () => (
+    <div className="flex items-center justify-center min-h-screen bg-[#202023] dark:bg-[#f0e7db]">
+      <div className="text-white/80 dark:text-gray-800">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#ff63c3] dark:border-indigo-400"></div>
+      </div>
+    </div>
+);
+
 
 export const MyContext = createContext<ContextProps | null>(null);
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Homepage />,
-  },
-  {
-    path: "/works",
-    element: <WorksContent />,
-  },
-  {
-    path: "/works/:projectId",
-    element: <WorkItem />,
-  },
-  {
-    path: "/setup",
-    element: <SetupContent />,
-  },
-  {
-    path: "/setup/:setupId",
-    element: <SetupItem />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-]);
+
+const THEME_STORAGE_KEY = "preferred-theme";
+
+
+const getInitialTheme = (): "dark" | "light" => {
+  const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  if (storedTheme === "dark" || storedTheme === "light") {
+    return storedTheme;
+  }
+
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+
+  return "light";
+};
+
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/works" element={<WorksContent />} />
+          <Route path="/works/:projectId" element={<WorkItem />} />
+          <Route path="/setup" element={<SetupContent />} />
+          <Route path="/setup/:setupId" element={<SetupItem />} />
+          <Route path="*" element={<NotFound />} />
+        </>
+    )
+);
 
 function App() {
-  const [theme, setTheme] = useState<"dark" | "light">("light");
+  const [theme, setTheme] = useState<"dark" | "light">(getInitialTheme);
+
+
+  useEffect(() => {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  }, [theme]);
+
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (e: MediaQueryListEvent) => {
+
+      if (!localStorage.getItem(THEME_STORAGE_KEY)) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   return (
-    <MyContext.Provider value={{ theme, setTheme }}>
-      <div className="bg-[#202023] dark:bg-[#f0e7db] min-h-screen flex justify-center transition-colors duration-300">
-        <RouterProvider router={router} />
-      </div>
-    </MyContext.Provider>
+      <ErrorBoundary>
+        <MyContext.Provider value={{ theme, setTheme }}>
+          <div className="bg-[#202023] dark:bg-[#f0e7db] min-h-screen flex justify-center transition-colors duration-300">
+            <Suspense fallback={<LoadingFallback />}>
+              <RouterProvider router={router} />
+            </Suspense>
+          </div>
+        </MyContext.Provider>
+      </ErrorBoundary>
   );
 }
 

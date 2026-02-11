@@ -21,7 +21,7 @@ export const projects: Record<string, Works> = {
     title: "DropMusic",
     descriptionKey: "projects.dropmusic.description",
     stackName: "projects.workspace.stack",
-    stackKey: "React, TypeScript, Tailwind CSS",
+    stackKey: "React, TypeScript, Tailwind CSS, Vite, Redux",
     sourceName: "projects.dropmusic.source",
     sourceKey: "https://github.com/zshstacks/DropMusic",
     image: [
@@ -31,11 +31,25 @@ export const projects: Record<string, Works> = {
     ],
     longDescription: "Detailed information about the Todo project...",
   },
+  weather: {
+    title: "weather_react",
+    descriptionKey: "projects.weather_react.description",
+    stackName: "projects.weather_react.stack",
+    stackKey: "React, Vite, TypeScript, Tailwind CSS, OpenWeatherMap API, Redux",
+    sourceName: "projects.weather_react.source",
+    sourceKey: "https://github.com/zshstacks/weather_react",
+    image: [
+      "/works/weather/weather_helsinki.png",
+      "/works/weather/weather_riga.png",
+      "/works/weather/weather_london.png",
+    ],
+    longDescription: "Detailed information about the weather project...",
+  },
   mybooks: {
     title: "MyBooks",
     descriptionKey: "projects.mybooks.description",
     stackName: "projects.workspace.stack",
-    stackKey: "React, TypeScript, Tailwind CSS",
+    stackKey: "React(create-react-app), TypeScript, Tailwind CSS, Redux, Google Books API",
     sourceName: "projects.mybooks.source",
     sourceKey: "https://github.com/zshstacks/MyBooks",
     image: [
