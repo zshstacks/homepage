@@ -7,6 +7,7 @@ i18n.use(initReactI18next).init({
       translation: {
         works: "Works",
         setup: "Setup",
+        library: "Library",
         source: "Source",
         welcome: "Hello, I'm a full-stack web developer based in Latvia!",
         name: "Edgar Grishin",
@@ -104,6 +105,7 @@ i18n.use(initReactI18next).init({
       translation: {
         works: "Darbi",
         setup: "Konfigurācija",
+        library: "Bibliotēka",
         source: "Avots",
         welcome: "Labdien, esmu full-stack izstrādātājs Latvijā!",
         name: "Edgars Grišins",

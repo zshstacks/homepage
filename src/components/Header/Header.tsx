@@ -2,7 +2,11 @@ import { memo, useCallback, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router";
 import { FaGithub } from "react-icons/fa";
-import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
+import {
+  MdDarkMode,
+  MdOutlineArrowOutward,
+  MdOutlineLightMode,
+} from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { MyContext } from "@/App";
@@ -114,6 +118,20 @@ const Header = memo<HeaderProps>(({ handleContentChange }) => {
                 >
                   {t("setup")}
                 </button>
+                <a
+                  href="https://zshlibrary.vercel.app/"
+                  className="hover:underline hover:underline-offset-4 flex gap-1 items-center transition-opacity hover:opacity-80"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View my library"
+                >
+                  {t("library")}
+                  <MdOutlineArrowOutward
+                    className="mt-2"
+                    size={11}
+                    aria-hidden="true"
+                  />
+                </a>
 
                 <a
                   href="https://github.com/zshstacks/homepage"
