@@ -14,6 +14,13 @@ export const items = [
     isOld: false,
   },
   {
+    to: "/works/livecompile",
+    src: "/works/livecompile/livecompileMain.png",
+    title: "LiveCompile",
+    descKey: "livecompileDesc",
+    isOld: false,
+  },
+  {
     to: "/works/dropmusic",
     src: "/works/dropmusic/main.png",
     title: "DropMusic",

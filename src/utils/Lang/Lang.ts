@@ -24,6 +24,8 @@ i18n.use(initReactI18next).init({
           "An interactive, fully web-based “workspace” application featuring productivity and communication tools.",
         dropmusicDesc:
           "An atmospheric music player featuring drag-and-drop functionality, custom audio effects, and a highly tunable visual interface.",
+        livecompileDesc:
+          "A lightweight live reload CLI tool for Go that watches your project, rebuilds on save, and restarts your binary automatically.",
         mybooksDesc:
           "A book discovery tool integrating the Google Books API to browse literature and view detailed descriptions.",
         weatherDesc:
@@ -53,6 +55,12 @@ i18n.use(initReactI18next).init({
           sublime: {
             description:
               "SublimeHub is a full-stack web platform that combines critical service monitoring with real-time financial data analysis. The project consists of two core modules: a high-precision Uptime Monitor for tracking server availability, and a Crypto Tracker providing live market data via WebSockets. Built with Go (Echo) and Next.js, it showcases a modern architecture (Modular Monolith & Feature-based), secure JWT/OAuth2 authentication, and a seamless user experience.",
+            stack: "Stack",
+            source: "Source",
+          },
+          livecompile: {
+            description:
+              "A lightweight live reload tool for Go. Watches your project files for changes, automatically rebuilds the binary, and restarts the process. Built entirely in Go with support for custom CLI flags, environment variable injection, file extension filtering, directory exclusion, and graceful shutdown.",
             stack: "Stack",
             source: "Source",
           },
@@ -124,6 +132,8 @@ i18n.use(initReactI18next).init({
           "Atmosfērisks mūzikas atskaņotājs ar drag-and-drop funkcionalitāti, audio efektiem un pielāgojamu vizuālo vidi.",
         mybooksDesc:
           "Grāmatu meklēšanas rīks, kas integrējas ar Google Books API, lai pārlūkotu literatūru un detalizētus aprakstus.",
+        livecompileDesc:
+          "Viegls live reload CLI rīks Go projektiem, kas seko failu izmaiņām, pārkompilē un automātiski restartē bināro failu.",
         weatherDesc:
           "Dinamisks laikapstākļu panelis ar reāllaika API integrāciju un imersīvu, laikapstākļiem pielāgotu lietotāja saskarni.",
         sublimeDesc:
@@ -144,6 +154,12 @@ i18n.use(initReactI18next).init({
           sublime: {
             description:
               "SublimeHub ir full-stack tīmekļa platforma, kas apvieno kritiski svarīgu pakalpojumu uzraudzību ar reāllaika finanšu datu analīzi. Projekts sastāv no diviem galvenajiem moduļiem: augstas precizitātes Uptime Monitor, kas seko līdzi serveru pieejamībai, un Crypto Tracker, kas nodrošina tiešraides tirgus datus, izmantojot WebSockets. Izstrādāts, izmantojot Go (Echo) un Next.js, tas demonstrē modernu arhitektūru (Modular Monolith & Feature-based), drošu JWT/OAuth2 autentifikāciju un plūstošu lietotāja pieredzi.",
+            stack: "Steks",
+            source: "Avots",
+          },
+          livecompile: {
+            description:
+              "Viegls live reload rīks Go projektiem. Seko līdzi failu izmaiņām, automātiski pārkompilē bināro failu un restartē procesu. Pilnībā izstrādāts Go valodā ar atbalstu pielāgotiem CLI parametriem, vides mainīgo injekcijai, failu paplašinājumu filtrēšanai, direktoriju izslēgšanai un pareizai izslēgšanai.",
             stack: "Steks",
             source: "Avots",
           },

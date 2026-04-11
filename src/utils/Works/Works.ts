@@ -31,11 +31,25 @@ export const projects: Record<string, Works> = {
     ],
     longDescription: "Detailed information about the Todo project...",
   },
+  livecompile: {
+    title: "LiveCompile",
+    descriptionKey: "projects.livecompile.description",
+    stackName: "projects.livecompile.stack",
+    stackKey: "Golang",
+    sourceName: "projects.dropmusic.source",
+    sourceKey: "https://pkg.go.dev/github.com/zshstacks/LiveCompile",
+    image: [
+      "/works/livecompile/livecompileMain.png",
+      "/works/livecompile/livecompileMain2.png",
+    ],
+    longDescription: "Detailed information about the LiveCompile project...",
+  },
   weather: {
     title: "weather_react",
     descriptionKey: "projects.weather_react.description",
     stackName: "projects.weather_react.stack",
-    stackKey: "React, Vite, TypeScript, Tailwind CSS, OpenWeatherMap API, Redux",
+    stackKey:
+      "React, Vite, TypeScript, Tailwind CSS, OpenWeatherMap API, Redux",
     sourceName: "projects.weather_react.source",
     sourceKey: "https://github.com/zshstacks/weather_react",
     image: [
@@ -49,7 +63,8 @@ export const projects: Record<string, Works> = {
     title: "MyBooks",
     descriptionKey: "projects.mybooks.description",
     stackName: "projects.workspace.stack",
-    stackKey: "React(create-react-app), TypeScript, Tailwind CSS, Redux, Google Books API",
+    stackKey:
+      "React(create-react-app), TypeScript, Tailwind CSS, Redux, Google Books API",
     sourceName: "projects.mybooks.source",
     sourceKey: "https://github.com/zshstacks/MyBooks",
     image: [
@@ -63,7 +78,8 @@ export const projects: Record<string, Works> = {
     title: "SublimeHub",
     descriptionKey: "projects.sublime.description",
     stackName: "projects.sublime.stack",
-    stackKey: "Next.js, React, TypeScript, Redux, Tailwind CSS, Golang, Echo, Websockets, Postgresql",
+    stackKey:
+      "Next.js, React, TypeScript, Redux, Tailwind CSS, Golang, Echo, Websockets, Postgresql",
     sourceName: "projects.sublime.source",
     sourceKey: "https://github.com/zshstacks/sublime-hub",
     image: [
