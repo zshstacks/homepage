@@ -3,36 +3,33 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
-  Outlet,
 } from "react-router";
 import { createContext, useState, useEffect, lazy, Suspense } from "react";
 import { ContextProps } from "./types/types";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
-import { items as workItems } from "./utils/Arrays/WorkArr";
-import { items as setupItems } from "./utils/Arrays/SetupArr";
-import ScrollToTop from "@/components/ScrollToTop/ScrollToTop.tsx";
+import Layout from "@/components/Layout/Layout";
 
 const Homepage = lazy(() => import("./components/Homepage/Homepage"));
 const WorksContent = lazy(
-  () => import("./components/Homepage/WorksContent/WorksContent"),
+    () => import("./components/Homepage/WorksContent/WorksContent"),
 );
 const WorkItem = lazy(
-  () => import("./components/Homepage/WorksContent/WorkItem/WorkItem"),
+    () => import("./components/Homepage/WorksContent/WorkItem/WorkItem"),
 );
 const SetupContent = lazy(
-  () => import("./components/Homepage/SetupContent/SetupContent"),
+    () => import("./components/Homepage/SetupContent/SetupContent"),
 );
 const SetupItem = lazy(
-  () => import("./components/Homepage/SetupContent/SetupItem/SetupItem"),
+    () => import("./components/Homepage/SetupContent/SetupItem/SetupItem"),
 );
 const NotFound = lazy(() => import("./components/NotFound/NotFound"));
 
 const LoadingFallback = () => (
-  <div className="flex items-center justify-center min-h-screen bg-[#202023] dark:bg-[#f0e7db]">
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#202023] dark:bg-[#f0e7db]">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#ff63c3] dark:border-indigo-400"></div>
+    <div className="flex items-center justify-center min-h-screen bg-[#202023] dark:bg-[#f0e7db]">
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#202023] dark:bg-[#f0e7db]">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#ff63c3] dark:border-indigo-400"></div>
+      </div>
     </div>
-  </div>
 );
 
 export const MyContext = createContext<ContextProps | null>(null);
@@ -45,48 +42,29 @@ const getInitialTheme = (): "dark" | "light" => {
     return storedTheme;
   }
   if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
   ) {
     return "dark";
   }
   return "light";
 };
 
-const RootLayout = () => (
-  <>
-    <ScrollToTop />
-    <Outlet />
-  </>
-);
-
 const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route element={<RootLayout />}>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/works" element={<WorksContent />} />
-      <Route path="/works/:projectId" element={<WorkItem />} />
-      <Route path="/setup" element={<SetupContent />} />
-      <Route path="/setup/:setupId" element={<SetupItem />} />
-      <Route path="*" element={<NotFound />} />
-    </Route>,
-  ),
+    createRoutesFromElements(
+        <Route element={<Layout />}>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/works" element={<WorksContent />} />
+          <Route path="/works/:projectId" element={<WorkItem />} />
+          <Route path="/setup" element={<SetupContent />} />
+          <Route path="/setup/:setupId" element={<SetupItem />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>,
+    ),
 );
 
 function App() {
   const [theme, setTheme] = useState<"dark" | "light">(getInitialTheme);
-
-  useEffect(() => {
-    const allImages = [
-      ...workItems.map((item) => item.src),
-      ...setupItems.map((item) => item.src),
-    ];
-
-    allImages.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
 
   useEffect(() => {
     localStorage.setItem(THEME_STORAGE_KEY, theme);
@@ -110,15 +88,15 @@ function App() {
   }, []);
 
   return (
-    <ErrorBoundary>
-      <MyContext.Provider value={{ theme, setTheme }}>
-        <div className="min-h-screen flex justify-center">
-          <Suspense fallback={<LoadingFallback />}>
-            <RouterProvider router={router} />
-          </Suspense>
-        </div>
-      </MyContext.Provider>
-    </ErrorBoundary>
+      <ErrorBoundary>
+        <MyContext.Provider value={{ theme, setTheme }}>
+          <div className="min-h-screen flex justify-center">
+            <Suspense fallback={<LoadingFallback />}>
+              <RouterProvider router={router} />
+            </Suspense>
+          </div>
+        </MyContext.Provider>
+      </ErrorBoundary>
   );
 }
 
