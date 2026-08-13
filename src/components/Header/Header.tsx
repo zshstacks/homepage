@@ -222,7 +222,7 @@ const Header = memo<HeaderProps>(({ handleContentChange }) => {
             </button>
 
             <a
-              href="https://github.com/wlr1/homepage"
+              href="https://github.com/zshstacks/homepage"
               className="hover:underline flex gap-1 p-2 items-center transition-opacity hover:opacity-80"
               target="_blank"
               rel="noopener noreferrer"
