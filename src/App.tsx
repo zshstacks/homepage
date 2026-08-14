@@ -25,10 +25,11 @@ const SetupItem = lazy(
 const NotFound = lazy(() => import("./components/NotFound/NotFound"));
 
 const LoadingFallback = () => (
-    <div className="flex items-center justify-center min-h-screen bg-[#202023] dark:bg-[#f0e7db]">
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#202023] dark:bg-[#f0e7db]">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#ff63c3] dark:border-indigo-400"></div>
-      </div>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#202023] dark:bg-[#f0e7db]">
+        <div className="relative">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#81e6d9] dark:border-[#319795]"></div>
+            <div className="absolute top-0 left-0 animate-spin rounded-full h-12 w-12 border-r-2 border-l-2 border-[#ff63c3] dark:border-indigo-400" style={{ animationDirection: "reverse", animationDuration: "1.5s" }}></div>
+        </div>
     </div>
 );
 
